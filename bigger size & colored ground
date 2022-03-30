@@ -3,11 +3,11 @@
 //눈이 쌓여 지형의 색이 하얘지는 변화를 추가할 예정입니다.
 
 //Agenda
-  //지형을 움직일지 고정시킬지 정해야 합니다.
+//지형을 움직일지 고정시킬지 정해야 합니다.
 
-  //ideas
-    //지형이 움직일 시: 눈덩이 굴리기(example 1 활용) - 눈덩이를 굴리면 크기가 커지는 기능
-    //고정 시: 눈사람 또는 이글루 등의 조형물 추가
+//ideas
+//지형이 움직일 시: 눈덩이 굴리기(example 1 활용) - 눈덩이를 굴리면 크기가 커지는 기능
+//고정 시: 눈사람 또는 이글루 등의 조형물 추가
 
 var cols, rows;
 var scl = 20;
@@ -35,24 +35,24 @@ function setup() {
       terrain[x][y] = 0; //specify a default value for now
     }
   }
-  
-  xa = createSlider(-800,800,300);
-  xb = createSlider(-800,600,400);
-  xz = createSlider(-800,800,0);
-  
-  for(let i = 0; i < num; i++)
+
+  xa = createSlider(-800, 800, 300);
+  xb = createSlider(-800, 600, 400);
+  xz = createSlider(-800, 800, 0);
+
+  for (let i = 0; i < num; i++)
     snow.push(new Snow());
 }
 
 
 
-//let hv = 500, i = 0, j = 0;   <=이건 뭔가요? 지워도 괜찮을까요? 
+//let hv = 500, i = 0, j = 0;   <=이건 뭔가요? 지워도 괜찮을까요?
 function draw() {
-  let vx = map(xa.value(),0,width,-800,800);
-  let vy = map(0,xb.value(),height,100,800);
-  let vz = map(xz.value(),0,height/2,-800,800);
-  camera(vx,vy,vz,0,0,0,0,1,0);
-  
+  let vx = map(xa.value(), 0, width, -800, 800);
+  let vy = map(0, xb.value(), height, 100, 800);
+  let vz = map(xz.value(), 0, height/2, -800, 800);
+  camera(vx, vy, vz, 0, 0, 0, 0, 1, 0);
+
   flying -= 0.01;
   var yoff = flying;
   for (var y = 0; y < rows; y++) {
@@ -74,43 +74,43 @@ function draw() {
     beginShape(TRIANGLE_STRIP);
     for (var x = 0; x < cols; x++) {
       c = terrain[x][y];          //지형 색상
-      c = map(c, -100,100,0,255);
+      c = map(c, -100, 100, 0, 255);
       r = c-20;
       g = c+30;
       b = c-20;
-      fill(r,g,b);
+      fill(r, g, b);
       noStroke();
       vertex(x * scl, y * scl, terrain[x][y]);
       vertex(x * scl, (y + 1) * scl, terrain[x][y + 1]);
     }
     endShape();
   }
-  for(var x =0; x<num; x++)
+  for (var x =0; x<num; x++)
   {
     snow[x].move();
     snow[x].display();
   }
 }
 
-class Snow{
-  constructor(i,j,k){
-    this.i = random(0,w);
-    this.j = random(0,h);
-    this.k = random(100,500);
+class Snow {
+  constructor(i, j, k) {
+    this.i = random(0, w);
+    this.j = random(0, h);
+    this.k = random(100, 500);
   }
-  move(){
+  move() {
     this.k -= 5;
-    if(this.k<=0)
+    if (this.k<=0)
     {
-      this.i = random(0,w);
-      this.j = random(0,h);
-      this.k = random(400,500);
+      this.i = random(0, w);
+      this.j = random(0, h);
+      this.k = random(400, 500);
     }
   }
-  display(){
+  display() {
     push();
     noStroke();
-    translate(this.i,this.j,this.k);
+    translate(this.i, this.j, this.k);
     ambientLight(160);              //increased brightness
     let locX = mouseX - width / 2;  //should be controled with sliders
     let locY = mouseY - height / 2; //or no change needed
