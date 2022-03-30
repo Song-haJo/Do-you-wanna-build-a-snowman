@@ -143,28 +143,28 @@ function keyPressed() {
     ball += 0.2;
     if (sy < h)
       sy += 5;
-    flying -= 0.01;
+    flying += 0.01;
     temp1 = flying;
   }
   if (key == 's') {
     ball+=0.2;
     if (sy>0)
       sy-=5;
-    flying += 0.01;
+    flying -= 0.01;
     temp1 = flying;
   }
   if (key == 'a') {
     ball+=0.2;
     if (sx<w)
       sx+=5;
-    flying2 -= 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
+    flying2 += 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
     temp2 = flying2;
   }
   if (key == 'd') {
     ball += 0.2;
     if (sx>0)
       sx-=5;
-    flying2 += 0.01;
+    flying2 -= 0.01;
     temp2 = flying2;
   }
   if (key == 20)  //stop - spacebar
