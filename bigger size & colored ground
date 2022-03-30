@@ -23,7 +23,7 @@ let xb;
 let xz;
 let snow = [];
 let c, r, g;
-let time = 0, timespeed=1;//time이 커짐에따라 지헝이 하얗게 변합니다. 빠른 변화를 위해 timespeed를 1로 했습니다. 적절히 바꾸시면 됩니다.
+let time = 0, timespeed=1;//time이 커짐에따라 지형이 하얗게 변합니다. 빠른 변화를 위해 timespeed를 1로 했습니다. 적절히 바꾸시면 됩니다.
 function setup() {
   createCanvas(window.innerWidth-100, window.innerHeight-50, WEBGL);
   cols = w / scl;
