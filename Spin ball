@@ -143,7 +143,7 @@ class Snow {
   }
 }
 function keyPressed() {
-  if (key == 'w') {
+  if (key == 's') {
     ball += 0.2;
     spinX = millis() / 1000;
     spinY = 0;
@@ -152,7 +152,7 @@ function keyPressed() {
     flying -= 0.01;
     temp1 = flying;
   }
-  if (key == 's') {
+  if (key == 'w') {
     ball+=0.2;
     spinX = -millis() / 1000;
     spinY = 0;
@@ -161,7 +161,7 @@ function keyPressed() {
     flying += 0.01;
     temp1 = flying;
   }
-  if (key == 'a') {
+  if (key == 'd') {
     ball+=0.2;
     spinX = 0;
     spinY = -millis() / 1000;
@@ -170,7 +170,7 @@ function keyPressed() {
     flying2 -= 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
     temp2 = flying2;
   }
-  if (key == 'd') {
+  if (key == 'a') {
     ball += 0.2;
     spinX = 0;
     spinY = millis() / 1000;
