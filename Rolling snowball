@@ -20,7 +20,7 @@ let xb;
 let xz;
 let snow = [];
 let c, r, g;
-let time = 0, timespeed=0.3;//time이 커짐에따라 지헝이 하얗게 변합니다. 빠른 변화를 위해 timespeed를 1로 했습니다. 적절히 바꾸시면 됩니다.
+let time = 0, timespeed=0.3;
 function setup() {
   createCanvas(window.innerWidth-100, window.innerHeight-50, WEBGL);
   cols = w / scl;
@@ -92,7 +92,7 @@ function draw() {
   pointLight(255, 255, 255, locX, locY-300, 0);
   specularMaterial("White");
   shininess(150);
-  translate(sx, sy, 1);
+  translate(sx, sy, ball);
   sphere(ball);
   keyPressed();
   pop();
@@ -102,7 +102,7 @@ class Snow {
   constructor(i, j, k) {
     this.i = random(0, w);
     this.j = random(0, h);
-    this.k = random(100, 500);
+    this.k = random(400, 2000);
   }
   move() {
     this.k -= 5;
@@ -110,7 +110,7 @@ class Snow {
     {
       this.i = random(0, w);
       this.j = random(0, h);
-      this.k = random(400, 500);
+      this.k = random(1000, 2000);
     }
   }
   display() {
@@ -129,29 +129,33 @@ class Snow {
 }
 function keyPressed(){
   if(key=='w'){
-    ball+=0.5;
-    sy+=5;
+    ball+=0.2;
+    if(sy<h)
+      sy+=5;
     flying -=0.01;
     temp1 =flying;
     temp2 = 0 ;
   }
   if(key=='s'){
-    ball+=0.5;
-    sy-=5;
+    ball+=0.2;
+    if(sy>0)
+      sy-=5;
     flying +=0.01;
     temp1 =flying;
     temp2 = 0 ;
   }
   if(key=='a'){
-    ball+=0.5;
-    sx+=5;
+    ball+=0.2;
+    if(sx<w)
+      sx+=5;
     flying -=0.01;
     temp1 = 0;
     temp2 = flying;
   }
   if(key=='d'){
-    ball+=0.5;
-    sx-=5;
+    ball+=0.2;
+    if(sx>0)
+      sx-=5;
     flying +=0.01;
     temp1 = 0;
     temp2 = flying;
