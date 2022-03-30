@@ -1,6 +1,13 @@
-//window.innerWidth와 window.innerHeight를 이용하여 크기를 습니다.
+//window.innerWidth와 window.innerHeight를 이용하여 크기를 확대했습니다.
 //지형에 색을 추가했습니다.
 //눈이 쌓여 지형의 색이 하얘지는 변화를 추가할 예정입니다.
+
+//Agenda
+  //지형을 움직일지 고정시킬지 정해야 합니다.
+
+  //ideas
+    //지형이 움직일 시: 눈덩이 굴리기(example 1 활용) - 눈덩이를 굴리면 크기가 커지는 기능
+    //고정 시: 눈사람 또는 이글루 등의 조형물 추가
 
 var cols, rows;
 var scl = 20;
