@@ -66,7 +66,7 @@ function draw() {
   for (var y = 0; y < rows - 1; y++) {
     beginShape(TRIANGLE_STRIP);
     for (var x = 0; x < cols; x++) {
-      c = terrain[x][y];          //지형 색상
+      c = terrain[x][y];          //terrain color
       c = map(c, -100, 100, 0, 255);
       r = c-20 + time;
       g = c+30 + time/2;
