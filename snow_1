@@ -1,5 +1,5 @@
 //3차원 지형에 눈이 내리는 코드입니다.
-//클래스를 사용했으며 크기는 display에 sphere(x)을 수정하면 되고 떨어지는 속도는 move()에 this.k-=5; 부분을 수정하면 됩니다. num을 수정하면 눈의 개수를 바꿀 수 있습니다.
+//클래스를 사용했으며 눈의 크기는 display에 sphere(x)을 수정하면 되고 떨어지는 속도는 move()에 this.k-=5; 부분을 수정하면 됩니다. num을 수정하면 눈의 개수를 바꿀 수 있습니다.
 //클래스 관련 설명은 밑의 사이트를 통해 확인 가능합니다.
 //https://p5js.org/ko/examples/objects-array-of-objects.html
 
