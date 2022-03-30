@@ -1,5 +1,6 @@
 //snow_1을 수정하여 만들었습니다.
 //조명을 추가하였고, 현재 마우스로 조명이 조절되는 상태이지만 슬라이더로 바꿀 계획입니다.
+//참고: https://p5js.org/reference/#/p5/specularMaterial
 
 var cols, rows;
 var scl = 20;
