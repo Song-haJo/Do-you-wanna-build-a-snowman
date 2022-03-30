@@ -1,6 +1,7 @@
 // 방향을 변환할 때 부자연스러운 점이 있습니다. - flying2를 추가하여 temp1과 temp2의 flying 값을 분리하여 해결했습니다.
 // 공이 굴러간다는 느낌이 살지않아서 좀 더 찾아봐야 할 듯 합니다.
 // 공의 빛 반사가 부자연스럽습니다. - 빛을 마우스쪽에서 나가게 하지않고 고정시켜서 해결했습니다.
+// 지형이 움직이는 것이 확실하게 보이기 위해 flying 값을 10 곱했습니다.
 
 var cols, rows;               //terrain variables
 var scl = 20;
@@ -143,28 +144,28 @@ function keyPressed() {
     ball += 0.2;
     if (sy < h)
       sy += 5;
-    flying += 0.01;
+    flying += 0.1;
     temp1 = flying;
   }
   if (key == 's') {
     ball+=0.2;
     if (sy>0)
       sy-=5;
-    flying -= 0.01;
+    flying -= 0.1;
     temp1 = flying;
   }
   if (key == 'a') {
     ball+=0.2;
     if (sx<w)
       sx+=5;
-    flying2 += 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
+    flying2 += 0.1; //temp2의 flying 값을 temp1과 분리했습니다.
     temp2 = flying2;
   }
   if (key == 'd') {
     ball += 0.2;
     if (sx>0)
       sx-=5;
-    flying2 -= 0.01;
+    flying2 -= 0.1;
     temp2 = flying2;
   }
   if (key == 20)  //stop - spacebar
