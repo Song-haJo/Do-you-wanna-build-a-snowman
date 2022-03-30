@@ -87,7 +87,7 @@ function draw() {
     time += timespeed;
   push();
   ambientLight(160);
-  pointLight(255, 255, 255,  0, -5000, 0);
+  pointLight(255, 255, 255,  0, -5000, 0); //deleted mouse variables
   specularMaterial("White");
   shininess(150);
   translate(sx, sy, ball);
@@ -115,9 +115,9 @@ class Snow {
     push();
     noStroke();
     translate(this.i, this.j, this.k);
-    ambientLight(160);              //increased brightness
-    let locX = mouseX - width / 2;  //should be controled with sliders
-    let locY = mouseY - height / 2; //or no change needed
+    ambientLight(160);
+    let locX = mouseX - width / 2;
+    let locY = mouseY - height / 2;
     pointLight(255, 255, 255, locX, locY, 50);
     specularMaterial(255);
     shininess(250);
