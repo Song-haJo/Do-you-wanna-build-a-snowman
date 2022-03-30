@@ -1,4 +1,4 @@
-# Terrain-with-Lilght-Camera-Material
+# Terrain-with-Light-Camera-Material
 Processing / written in p5.js
 
 4
