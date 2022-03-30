@@ -1,0 +1,116 @@
+//window.innerWidth와 window.innerHeight를 이용하여 크기를 습니다.
+//지형에 색을 추가했습니다.
+//눈이 쌓여 지형의 색이 하얘지는 변화를 추가할 예정입니다.
+
+var cols, rows;
+var scl = 20;
+var w = window.innerWidth*3;
+var h = window.innerHeight*2.5;
+var flying = 0;
+
+var terrain = [];
+
+var num = 500;
+let xa;
+let xb;
+let xz;
+let snow = [];
+let c, r, g;
+
+function setup() {
+  createCanvas(window.innerWidth-100, window.innerHeight-50, WEBGL);
+  cols = w / scl;
+  rows = h / scl;
+
+  for (var x = 0; x < cols; x++) {
+    terrain[x] = [];
+    for (var y = 0; y < rows; y++) {
+      terrain[x][y] = 0; //specify a default value for now
+    }
+  }
+  
+  xa = createSlider(-800,800,300);
+  xb = createSlider(-800,600,400);
+  xz = createSlider(-800,800,0);
+  
+  for(let i = 0; i < num; i++)
+    snow.push(new Snow());
+}
+
+
+
+//let hv = 500, i = 0, j = 0;   <=이건 뭔가요? 지워도 괜찮을까요? 
+function draw() {
+  let vx = map(xa.value(),0,width,-800,800);
+  let vy = map(0,xb.value(),height,100,800);
+  let vz = map(xz.value(),0,height/2,-800,800);
+  camera(vx,vy,vz,0,0,0,0,1,0);
+  
+  flying -= 0.01;
+  var yoff = flying;
+  for (var y = 0; y < rows; y++) {
+    var xoff = 0;
+    for (var x = 0; x < cols; x++) {
+      terrain[x][y] = map(noise(xoff, yoff), 0, 1, -100, 100);
+      xoff += 0.2;
+    }
+    yoff += 0.2;
+  }
+
+
+  background(0);
+  translate(0, 50);
+  rotateX(PI*0.4);
+  fill(200, 200, 200, 150);
+  translate(-w / 2, -h / 2);
+  for (var y = 0; y < rows - 1; y++) {
+    beginShape(TRIANGLE_STRIP);
+    for (var x = 0; x < cols; x++) {
+      c = terrain[x][y];          //지형 색상
+      c = map(c, -100,100,0,255);
+      r = c-20;
+      g = c+30;
+      b = c-20;
+      fill(r,g,b);
+      noStroke();
+      vertex(x * scl, y * scl, terrain[x][y]);
+      vertex(x * scl, (y + 1) * scl, terrain[x][y + 1]);
+    }
+    endShape();
+  }
+  for(var x =0; x<num; x++)
+  {
+    snow[x].move();
+    snow[x].display();
+  }
+}
+
+class Snow{
+  constructor(i,j,k){
+    this.i = random(0,w);
+    this.j = random(0,h);
+    this.k = random(100,500);
+  }
+  move(){
+    this.k -= 5;
+    if(this.k<=0)
+    {
+      this.i = random(0,w);
+      this.j = random(0,h);
+      this.k = random(400,500);
+    }
+  }
+  display(){
+    push();
+    noStroke();
+    translate(this.i,this.j,this.k);
+    ambientLight(160);              //increased brightness
+    let locX = mouseX - width / 2;  //should be controled with sliders
+    let locY = mouseY - height / 2; //or no change needed
+    pointLight(255, 255, 255, locX, locY, 50);
+    specularMaterial(255);
+    shininess(250);
+    sphere(10);
+    pop();
+  }
+}
