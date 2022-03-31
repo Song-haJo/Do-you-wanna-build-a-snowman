@@ -1,5 +1,6 @@
 //구글에서 '눈오는 하늘' 검색해서 나온 이미지를 추가했습니다.
 //아직 완성도가 높진 않으니 의견 바랍니다.
+//슬라이더 디폴트 값을 조절하여 기본 구도를 조정했습니다.
 
 var cols, rows;               //terrain variables
 var scl = 20;
@@ -25,7 +26,7 @@ let time = 0, timespeed=0.3;
 let img;
 
 function preload() {
-  img = loadImage("https://upload2.inven.co.kr/upload/2016/12/22/bbs/i13434774584.gif");
+  img = loadImage("https://upload2.inven.co.kr/upload/2016/12/22/bbs/i13434774584.gif");     // img here!
 }
 
 
@@ -68,7 +69,7 @@ function draw() {
   }
 
 
-  background(146, 164, 184);
+  background(146, 164, 184);                        // background color here!
 
   push();
   rotateX(-PI/10);
