@@ -33,7 +33,7 @@ function setup() {
   createCanvas(window.innerWidth-100, window.innerHeight-50, WEBGL);
   cols = w / scl;
   rows = h / scl;
-  
+
   for (var x = 0; x < cols; x++) {
     terrain[x] = [];
     for (var y = 0; y < rows; y++) {
@@ -41,17 +41,17 @@ function setup() {
     }
   }
 
-//sliders
-  xa = createSlider(-1000, 1000, 350);
-  xb = createSlider(-800, 800, 300);
-  xz = createSlider(-800, 800, -100);
+  //sliders
+  xa = createSlider(-1000, 1000, 400);
+  xb = createSlider(-800, 800, 700);
+  xz = createSlider(-800, 800, -500);
 
   for (let i = 0; i < num; i++)
     snow.push(new Snow());
 }
 
 function draw() {
-//camera
+  //camera
   let vx = map(xa.value(), 0, width, -800, 800);
   let vy = map(0, xb.value(), height, 100, 800);
   let vz = map(xz.value(), 0, height/2, -800, 800);
@@ -68,18 +68,18 @@ function draw() {
   }
 
 
-  background(0);
-  
+  background(146, 164, 184);
+
   push();
   rotateX(-PI/10);
-  translate(0,0,1000);
+  translate(0, 0, 1000);
   image(img, -2500, -2000, 5000, 2000);
   pop();
-  
+
   translate(0, 50);
   rotateX(PI*0.4);
   fill(200, 200, 200, 150);
-  
+
   //terrain
   translate(-w / 2, -h / 2);
   for (var y = 0; y < rows - 1; y++) {
@@ -97,18 +97,18 @@ function draw() {
     }
     endShape();
   }
-  
+
   //snow
   for (var x=0; x<num; x++)
   {
     snow[x].move();
     snow[x].display();
   }
-  
-  
+
+
   if (time<70)
     time += timespeed;
-    
+
   push();
   ambientLight(160);                      //light
   pointLight(255, 255, 255, 0, -5000, 0); //deleted mouse variables
@@ -117,28 +117,28 @@ function draw() {
   translate(sx, sy, ball);                //ball
   sphere(ball);
   let o = Math.sqrt(((sx-w/4)*(sx-w/4)+(sy-h/4)*(sy-h/4)+(ball-50)*(ball-50)));
-   if(keyIsPressed==true)
-   {
-     speed = 5;
-     if(key=='w')
-     sy+=speed;
-    if(key=='s')
-     sy-=speed;
-    if(key=='a')
-     sx+=speed;
-    if(key=='w')
-     sx-=speed;
-   }
-  if(o<=(ball+100))
-          speed = 0;
+  if (keyIsPressed==true)
+  {
+    speed = 5;
+    if (key=='w')
+      sy+=speed;
+    if (key=='s')
+      sy-=speed;
+    if (key=='a')
+      sx+=speed;
+    if (key=='w')
+      sx-=speed;
+  }
+  if (o<=(ball+100))
+    speed = 0;
 
   keyPressed();
   pop();
   push();
   ambientLight(160);
-  pointLight(255, 255, 255,  0, -5000, 0);
-  translate(w/4,h/4,50);
-  fill(225,0,225);
+  pointLight(255, 255, 255, 0, -5000, 0);
+  translate(w/4, h/4, 50);
+  fill(225, 0, 225);
   sphere(100);
   pop();
 }
@@ -174,44 +174,43 @@ class Snow {
 }
 function keyPressed() {
   let o = Math.sqrt(((sx-w/4)*(sx-w/4)+(sy-h/4)*(sy-h/4)+(ball-50)*(ball-50)));
-if(o<=(ball+100))
+  if (o<=(ball+100))
+  {
+    sx=sx;
+    sy=sy;
+  } else {
+    if (key == 'w') {
+      ball += 0.2;
+      if (sy < h)
+        sy += speed;
+      flying -= 0.01;
+      temp1 = flying;
+    }
+    if (key == 's') {
+      ball+=0.2;
+      if (sy>0)
+        sy-=speed;
+      flying += 0.01;
+      temp1 = flying;
+    }
+    if (key == 'a') {
+      ball+=0.2;
+      if (sx<w)
+        sx+=speed;
+      flying2 -= 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
+      temp2 = flying2;
+    }
+    if (key == 'd') {
+      ball += 0.2;
+      if (sx>0)
+        sx-=speed;
+      flying2 += 0.01;
+      temp2 = flying2;
+    }
+    if (key == 20)  //stop - spacebar
     {
       sx=sx;
       sy=sy;
     }
-  else{
-  if (key == 'w') {
-    ball += 0.2;
-    if (sy < h)
-      sy += speed;
-    flying -= 0.01;
-    temp1 = flying;
-  }
-  if (key == 's') {
-    ball+=0.2;
-    if (sy>0)
-      sy-=speed;
-    flying += 0.01;
-    temp1 = flying;
-  }
-  if (key == 'a') {
-    ball+=0.2;
-    if (sx<w)
-      sx+=speed;
-    flying2 -= 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
-    temp2 = flying2;
-  }
-  if (key == 'd') {
-    ball += 0.2;
-    if (sx>0)
-      sx-=speed;
-    flying2 += 0.01;
-    temp2 = flying2;
-  }
-  if (key == 20)  //stop - spacebar
-  {
-    sx=sx;
-    sy=sy;
-  }
   }
 }
