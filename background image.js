@@ -74,7 +74,7 @@ function draw() {
   push();
   rotateX(-PI/10);
   translate(0, 0, 1000);
-  image(img, -2500, -2000, 5000, 2000);
+  image(img, -2500, -2000, 5000, 2000);             // image settings here!
   pop();
 
   translate(0, 50);
