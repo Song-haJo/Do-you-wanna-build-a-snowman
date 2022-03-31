@@ -4,18 +4,18 @@
 
 var cols, rows;               //terrain variables
 var scl = 20;
-var w = window.innerWidth*3;
+var w = window.innerWidth*4.8;
 var h = window.innerHeight*2.5;
 var terrain = [];
 var flying = 0;
-var flying2 = 0;              //add flying2
+var flying2 = 0;              //flying2에 대한 설명을 
 let sx=w/2;                   //ball variables
 let sy=h/2;
 let ball=100;
 let temp1=0;
 let temp2=0;
 
-let speed=5;
+
 var num = 500;
 let xa;
 let xb;
@@ -26,7 +26,7 @@ let time = 0, timespeed=0.3;
 let img;
 
 function preload() {
-  img = loadImage("https://upload2.inven.co.kr/upload/2016/12/22/bbs/i13434774584.gif");     // img here!
+  img = loadImage("https://upload2.inven.co.kr/upload/2016/12/22/bbs/i13434774584.gif");    // image here!
 }
 
 
@@ -34,7 +34,7 @@ function setup() {
   createCanvas(window.innerWidth-100, window.innerHeight-50, WEBGL);
   cols = w / scl;
   rows = h / scl;
-
+  
   for (var x = 0; x < cols; x++) {
     terrain[x] = [];
     for (var y = 0; y < rows; y++) {
@@ -42,7 +42,7 @@ function setup() {
     }
   }
 
-  //sliders
+//sliders
   xa = createSlider(-1000, 1000, 400);
   xb = createSlider(-800, 800, 700);
   xz = createSlider(-800, 800, -500);
@@ -52,7 +52,7 @@ function setup() {
 }
 
 function draw() {
-  //camera
+//camera
   let vx = map(xa.value(), 0, width, -800, 800);
   let vy = map(0, xb.value(), height, 100, 800);
   let vz = map(xz.value(), 0, height/2, -800, 800);
@@ -69,18 +69,18 @@ function draw() {
   }
 
 
-  background(146, 164, 184);                        // background color here!
-
+  background(146,164,184);                // background color
+  
   push();
   rotateX(-PI/10);
-  translate(0, 0, 1000);
-  image(img, -2500, -2000, 5000, 2000);
+  translate(0,0,1000);
+  image(img, -2500, -2000, 5000, 2000);   // image location & direction
   pop();
-
+  
   translate(0, 50);
   rotateX(PI*0.4);
   fill(200, 200, 200, 150);
-
+  
   //terrain
   translate(-w / 2, -h / 2);
   for (var y = 0; y < rows - 1; y++) {
@@ -90,7 +90,7 @@ function draw() {
       c = map(c, -100, 100, 0, 255);
       r = c-20 + time;
       g = c+30 + time/2;
-      b = c-20  + time;
+      b = c-20 + time;
       fill(r, g, b);
       noStroke();
       vertex(x * scl, y * scl, terrain[x][y]);
@@ -98,65 +98,55 @@ function draw() {
     }
     endShape();
   }
-
+  
   //snow
-  for (var x=0; x<num; x++)
+  for (var x = 0; x < num; x++)
   {
     snow[x].move();
     snow[x].display();
   }
-
-
-  if (time<70)
+  
+  
+  if (time < 70)
     time += timespeed;
-
+    
   push();
   ambientLight(160);                      //light
-  pointLight(255, 255, 255, 0, -5000, 0); //deleted mouse variables
+  pointLight(255, 255, 255, 0, -5000, 0);
   specularMaterial("White");
   shininess(150);
   translate(sx, sy, ball);                //ball
   sphere(ball);
-  let o = Math.sqrt(((sx-w/4)*(sx-w/4)+(sy-h/4)*(sy-h/4)+(ball-50)*(ball-50)));
-  if (keyIsPressed==true)
-  {
-    speed = 5;
-    if (key=='w')
-      sy+=speed;
-    if (key=='s')
-      sy-=speed;
-    if (key=='a')
-      sx+=speed;
-    if (key=='w')
-      sx-=speed;
-  }
-  if (o<=(ball+100))
-    speed = 0;
-
   keyPressed();
   pop();
-  push();
-  ambientLight(160);
-  pointLight(255, 255, 255, 0, -5000, 0);
-  translate(w/4, h/4, 50);
-  fill(225, 0, 225);
-  sphere(100);
-  pop();
 }
+  
+let size_ = 1000;         //원래 지형 크기 안에서만 눈을 생성하면 방향 키를 눌러 눈이 움직이고 다시 생성될 때 부자연스러워서 범위를 생성되는 범위를 넓혔습니다.
 
 class Snow {
   constructor(i, j, k) {
-    this.i = random(0, w);
-    this.j = random(0, h);
+    this.i = random(-size_, w+size_);
+    this.j = random(-size_, h+size_);
     this.k = random(400, 2000);
   }
   move() {
-    this.k -= 5;
+    let v1 = 1, v2 = 1;   //방향키를 누르면 값이 변하고 x좌표인 this.i와 y좌표인 this.j에 더해서 눈이 움직이게 합니다.
+    if(key=='w')
+      v2 = -10;
+    if(key=='s')
+      v2 = 10;
+    if(key=='a')
+      v1 = -10; 
+    if(key=='d')
+      v1 = 10;
+    this.i += v1;
+    this.j += v2;
+    this.k -= 10;
     if (this.k<=0)
     {
-      this.i = random(0, w);
-      this.j = random(0, h);
-      this.k = random(1000, 2000);
+        this.i = random(-size_, w+size_);
+        this.j = random(-size_, h+size_);
+        this.k = random(1000, 2000);
     }
   }
   display() {
@@ -173,45 +163,40 @@ class Snow {
     pop();
   }
 }
+
+
 function keyPressed() {
-  let o = Math.sqrt(((sx-w/4)*(sx-w/4)+(sy-h/4)*(sy-h/4)+(ball-50)*(ball-50)));
-  if (o<=(ball+100))
+  if (key == 'w') {
+    ball += 0.2;
+    if (sy < h)
+      sy += speed;
+    flying -= 0.01;
+    temp1 = flying;
+  }
+  if (key == 's') {
+    ball += 0.2;
+    if (sy > 0)
+      sy -= speed;
+    flying += 0.01;
+    temp1 = flying;
+  }
+  if (key == 'a') {
+    ball+=0.2;
+    if (sx < w)
+      sx += speed;
+    flying2 -= 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
+    temp2 = flying2;
+  }
+  if (key == 'd') {
+    ball += 0.2;
+    if (sx > 0)
+      sx -= speed;
+    flying2 += 0.01;
+    temp2 = flying2;
+  }
+  if (key == 20)  //stop - spacebar
   {
     sx=sx;
     sy=sy;
-  } else {
-    if (key == 'w') {
-      ball += 0.2;
-      if (sy < h)
-        sy += speed;
-      flying -= 0.01;
-      temp1 = flying;
-    }
-    if (key == 's') {
-      ball+=0.2;
-      if (sy>0)
-        sy-=speed;
-      flying += 0.01;
-      temp1 = flying;
-    }
-    if (key == 'a') {
-      ball+=0.2;
-      if (sx<w)
-        sx+=speed;
-      flying2 -= 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
-      temp2 = flying2;
-    }
-    if (key == 'd') {
-      ball += 0.2;
-      if (sx>0)
-        sx-=speed;
-      flying2 += 0.01;
-      temp2 = flying2;
-    }
-    if (key == 20)  //stop - spacebar
-    {
-      sx=sx;
-      sy=sy;
-    }
   }
 }
