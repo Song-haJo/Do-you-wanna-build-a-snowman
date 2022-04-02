@@ -37,3 +37,9 @@ Do you wanna build a snowman?은 D. Shiffman 교수님의 [3차원 지형 코드
 	 5. [background image.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/background%20image.js "background image.js")
 	 6. [make_snowman](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman "make_snowman")
 	 7. [make_snowman_2](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman_2 "make_snowman_2")
+		
+## 출처 및 참고 자료
+		- 이미지
+		https://upload2.inven.co.kr/upload/2016/12/22/bbs/i13434774584.gif
+		- 코드
+		https://editor.p5js.org/codingtrain/sketches/OPYPc4ueq
