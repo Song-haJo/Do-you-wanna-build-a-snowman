@@ -1,6 +1,7 @@
 # Do you wanna build a snowman?
 
-#### 프로젝트명 : Do you wanna build a snowman?<br/>과목명 : 컴퓨터 그래픽스(심재창 교수님)<br/>프로젝트 팀 : 10팀<br/>팀 구성 : [최연우](https://github.com/wafla)(PL), [서정목](https://github.com/SeoJeongmok), [이준성](https://github.com/leejs123), [조송하](https://github.com/Song-haJo), [허영준](https://github.com/telecom9005)<br/>프로젝트 수행 기간 : 2022.03.28~2022.04.03<br/>Processing / written in p5.js
+#### 프로젝트명 : Do you wanna build a snowman?
+####과목명 : 컴퓨터 그래픽스(심재창 교수님)<br/>프로젝트 팀 : 10팀<br/>팀 구성 : [최연우](https://github.com/wafla)(PL), [서정목](https://github.com/SeoJeongmok), [이준성](https://github.com/leejs123), [조송하](https://github.com/Song-haJo), [허영준](https://github.com/telecom9005)<br/>프로젝트 수행 기간 : 2022.03.28~2022.04.03<br/>Processing / written in p5.js
 
 ## 프로그램 개요
 Do you wanna build a snowman?은 D. Shiffman 교수님의 [3차원 지형 코드](https://editor.p5js.org/codingtrain/sketches/OPYPc4ueq)를 기반으로 WebGL과 p5.js를 이용하여 제작된 미니 게임입니다. 제목에서 보시다시피, 저희 게임은 겨울왕국에서 영감을 받아 만들었습니다. <b>귀여운 올라프처럼 눈덩이가 되어 반쪽을 찾아 눈사람을 완성시켜보세요!</b> 
