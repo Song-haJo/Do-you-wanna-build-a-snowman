@@ -14,7 +14,7 @@ var flying = 0;
 var flying2 = 0;              
 let sx=w/2;                   
 let sy=h/2;
-let ball=300;
+let ball=100;
 let temp1=0;
 let temp2=0;
 let v1 = 1, v2 = 1;  
