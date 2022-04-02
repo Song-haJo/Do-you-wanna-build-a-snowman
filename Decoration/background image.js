@@ -1,6 +1,7 @@
 //구글에서 '눈오는 하늘' 검색해서 나온 이미지를 추가했습니다.
 //아직 완성도가 높진 않으니 의견 바랍니다.
 //슬라이더 디폴트 값을 조절하여 기본 구도를 조정했습니다.
+//speed 변수가 빠져있어서 추가했고 flying이 0.01이라 지형이 움직이는게 잘 안보여서 0.1로 수정했습니다. + 지형 색깔이 살짝 초록색 느낌이나서 흰색으로 보이게 수정했습니다.
 
 var cols, rows;               //terrain variables
 var scl = 20;
@@ -8,7 +9,7 @@ var w = window.innerWidth*4.8;
 var h = window.innerHeight*2.5;
 var terrain = [];
 var flying = 0;
-var flying2 = 0;              //flying2에 대한 설명을 
+var flying2 = 0;              //flying2에 대한 설명을 -> 지형을 움직일때 xoff와 yoff에 같은 값을 사용하면 방향 전환시 부자연스러워서 추가했습니다.
 let sx=w/2;                   //ball variables
 let sy=h/2;
 let ball=100;
@@ -107,7 +108,7 @@ function draw() {
   }
   
   
-  if (time < 70)
+  if (time < 100)// 70 -> 100
     time += timespeed;
     
   push();
@@ -164,34 +165,34 @@ class Snow {
   }
 }
 
-
+let speed = 5;
 function keyPressed() {
   if (key == 'w') {
     ball += 0.2;
     if (sy < h)
       sy += speed;
-    flying -= 0.01;
+    flying += 0.1;
     temp1 = flying;
   }
   if (key == 's') {
     ball += 0.2;
     if (sy > 0)
       sy -= speed;
-    flying += 0.01;
+    flying -= 0.1;
     temp1 = flying;
   }
   if (key == 'a') {
     ball+=0.2;
     if (sx < w)
       sx += speed;
-    flying2 -= 0.01; //temp2의 flying 값을 temp1과 분리했습니다.
+    flying2 += 0.1; //temp2의 flying 값을 temp1과 분리했습니다.
     temp2 = flying2;
   }
   if (key == 'd') {
     ball += 0.2;
     if (sx > 0)
       sx -= speed;
-    flying2 += 0.01;
+    flying2 -= 0.1;
     temp2 = flying2;
   }
   if (key == 20)  //stop - spacebar
