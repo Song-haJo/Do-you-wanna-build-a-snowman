@@ -274,12 +274,14 @@ function check(){
     pop(); // 윗 눈덩이 눈,코 마지막
     push(); // 아래 눈덩이 단추 3개 시작
     fill(0);
-    translate(sx,sy,sz-ball/2);
-    translate(0,-ball,ball+ball/2);
+    translate(sx,sy,sz);
+    let side;
+    side = Math.sqrt(ball*ball-ball/2*ball/2);
+    translate(0,-side,ball/2);
     sphere(ball/10);
-    translate(0,0,-ball/2)
+    translate(0,-ball+side,-ball/2)
     sphere(ball/10);
-    translate(0,0,-ball/2)
+    translate(0,ball-side,-ball/2)
     sphere(ball/10);
     pop(); // 아래 눈덩이 단추 3개 마지막
     push(); // 눈사람 모자 시작
