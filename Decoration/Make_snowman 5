@@ -159,16 +159,33 @@ class Snow {
   move() {
     if(check_==0){
     if(key=='w')
+    {
       v2 = -10;
+      v1 = 0;
+    }
     if(key=='s')
+    {
       v2 = 10;
+      v1 = 0;
+    }
     if(key=='a')
+    {
       v1 = -10; 
+      v2 = 0;
+    }
     if(key=='d')
+    {
       v1 = 10;
+      v2 = 0;
+    }
+    if(key==20)
+    {
+      v1 = 0;
+      v2 = 0;
+    }
+    }
     this.i += v1;
     this.j += v2;
-    }
     this.k -= 10;
     if (this.k<=0)
     {
