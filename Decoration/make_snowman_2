@@ -18,11 +18,11 @@ let v1 = 1, v2 = 1;
 
 
 //1번 공은 움직일 수 있는 공이고 2번 공은 가만히 있는 공입니다.
-
 let sx2=w/2 + 300;
 let sy2=h/2 + 300;    //2번공 x,y 좌표
 let ball2=100;    //2번공 크기
 let check_ = 0;   //눈덩이가 만나면 바람을 멈춥니다. z좌표 계산에도 쓰입니다.
+let ballspeed = 0.2;    //눈덩이가 커지는 속도입니다.
 
 let sz=ball;    //각 공의 z좌표입니다.
 let sz2=ball2;    //구의 z좌표와 구의 크기가 동일한 변수를 사용하고 있어서 분리 했습니다.
@@ -137,7 +137,7 @@ function draw() {
   specularMaterial("White");
   shininess(150);
   translate(sx2, sy2, sz2);     
-  if(sx2<w && sx2 > 0 && sy2<h && sy2 > 0)    //지형 밖으로 나가면 사라짐
+  if(sx2<w && sx2 > 0 && sy2<h && sy2 > 0)//지형 밖으로 나가면 사라짐
     sphere(ball2);
   keyPressed();
   pop();
@@ -190,24 +190,20 @@ class Snow {
 }
 
 let speed = 5;
-function keyPressed() {       
+function keyPressed() {       //1번을 누른 경우, 2번을 누른경우 구분해서 공을 움직입니다.
     if (key == 'w') {
-      
       //1번 공
-      
-      ball += 0.2;
-      sz = ball;    
+      ball += ballspeed;
+      sz = ball;    //z좌표를 갱신합니다.
       if (sy < h)
         sy += speed;
       flying += 0.1;
       temp1 = flying;
-      
       //2번 공
-      
       sy2 -= speed;
     }
     if (key == 's') {
-      ball += 0.2;
+      ball += ballspeed;
       sz = ball;
       if (sy > 0)
         sy -= speed;
@@ -217,7 +213,7 @@ function keyPressed() {
       sy2 += speed;
     }
   if (key == 'a') {
-      ball += 0.2;
+      ball += ballspeed;
       sz = ball;
       if (sx < w)
         sx += speed;
@@ -227,7 +223,7 @@ function keyPressed() {
       sx2 -= speed;
     }
     if (key == 'd') {
-      ball += 0.2;
+      ball += ballspeed;
       sz = ball;
       if (sx > 0)
         sx -= speed;
@@ -246,7 +242,7 @@ function keyPressed() {
 }
 function check(){
   let o = Math.sqrt(((sx-sx2)*(sx-sx2)+(sy-sy2)*(sy-sy2)+(ball-ball2)*(ball-ball2)));
-  if(o<=(ball+ball2))   
+  if(o<=(ball+ball2))    //눈덩이가 만나면 눈덩이, 지형의 움직임, 바람을 멈춥니다.
   {  
     speed = 0;
     flying = 0;
@@ -254,10 +250,11 @@ function check(){
     v1 = 0;
     v2 = 0;
     
-    sx2 = sx;        //2번 공을 1번 공 위로 올립니다.
+    sx2 = sx;
     sy2 = sy;
-    if(check_==0) 
+    if(check_==0)    //check 함수가 계속 돌아가기 때문에 z좌표 계산을 한번만 하기 위해서 추가 했습니다.
     {
+      ballspeed = 0;
       sz2 = 2*sz + sz2;
       check_=1;
     }
