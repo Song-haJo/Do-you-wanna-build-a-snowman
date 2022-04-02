@@ -17,7 +17,6 @@ let sy=h/2;
 let ball=100;
 let temp1=0;
 let temp2=0;
-let v1 = 1, v2 = 1;  
 
 
 //1번 공은 움직일 수 있는 공이고 2번 공은 가만히 있는 공입니다.
@@ -36,7 +35,7 @@ let xb;
 let xz;
 let snow = [];
 let c, r, g;                  
-let time = 0, timespeed=0.3;
+let time = 0, timespeed=0.5;
 let img;
 
 function preload() {
@@ -157,6 +156,7 @@ class Snow {
     this.k = random(400, 2000);
   }
   move() {
+    let v1 = 0, v2 = 0;
     if(check_==0){
     if(key=='w')
     {
@@ -176,11 +176,6 @@ class Snow {
     if(key=='d')
     {
       v1 = 10;
-      v2 = 0;
-    }
-    if(key==20)
-    {
-      v1 = 0;
       v2 = 0;
     }
     }
