@@ -209,14 +209,13 @@ class Snow {
 
 function keyPressed() {
     if (key == 'w') {
-      //1번 공
       ball += grow;
       sz = ball;
       if (sy < h)
         sy += speed;
       flying += 0.1;
       temp1 = flying;
-      //2번 공
+      
       sy2 -= speed;
     }
     if (key == 's') {
