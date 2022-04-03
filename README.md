@@ -4,7 +4,8 @@
 ##### Processing / written in p5.js
 
   ## 프로그램 개요
-  ![image](https://user-images.githubusercontent.com/102511282/161424554-48b70c47-da09-40b2-a501-179507863eb9.png)
+  ![image](https://user-images.githubusercontent.com/102511282/161424612-046447d3-5707-4000-bec9-af1a57666166.png)
+  
   Do you wanna build a snowman?은 D. Shiffman 교수님의 [3차원 지형 코드](https://editor.p5js.org/codingtrain/sketches/OPYPc4ueq)를 기반으로 WebGL과 p5.js를 이용하여 제작된 미니 게임입니다. 제목에서 보시다시피, 저희 게임은 겨울왕국에서 영감을 받아 만들었습니다. <b>귀여운 올라프처럼 눈덩이가 되어 반쪽을 찾아 눈사람을 완성시켜보세요!</b>
   <blockquote>
   <h3>상세 구현 사항</h3>
