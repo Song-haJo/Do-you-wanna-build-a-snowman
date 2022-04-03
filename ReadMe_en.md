@@ -16,7 +16,8 @@
   > - You wanna take a picture of your snowman? Try controlling the camera angle with sliders!
   
 ### Now, it's time to play this game!
-# Enjoy!<h3 align="center">Thanks to Prof. J. Shim for this opportunity.</h3>
+# Enjoy!
+<h3 align="center">Thanks to Prof. J. Shim for this opportunity.</h3>
 	<p align="right">Sincerely,<br/>Team 10.</p>
 
   ## Directory
@@ -41,9 +42,9 @@
 	 6. [make_snowman.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman.js "make_snowman.js")
 	 7. [make_snowman_2.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman_2.js "make_snowman_2.js")
 	 8. [make_snowman_2_test.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman_2_test.js "make_snowman_2_test.js")
-	  9. [snowman_deco_1.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_1.js "snowman_deco_1.js")
-	  10. [snowman_deco_2.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_2.js "snowman_deco_2.js")
-	  11. [snowman_deco_3.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_3.js "snowman_deco_3.js")
+	 9. [snowman_deco_1.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_1.js "snowman_deco_1.js")
+	 10. [snowman_deco_2.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_2.js "snowman_deco_2.js")
+	 11. [snowman_deco_3.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_3.js "snowman_deco_3.js")
 
   ## References
   - Image
