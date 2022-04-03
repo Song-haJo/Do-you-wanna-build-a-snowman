@@ -24,9 +24,9 @@
   <details>
   <summary><h3>연습 파일</h3></summary>
   <ul>
-  <li>[Balls](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/tree/main/Balls "Balls")</li>
+  <li><a link="https://github.com/wafla/Terrain-with-Lilght-Camera-Material/tree/main/Balls">Balls</a></li>
 <ol>
-  	<li>[Rolling ball with normalMaterial](Rolling ball with normalMaterial)</li>
+  	<li><a link="https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/Balls/Rolling%20ball%20with%20normalMaterial">Rolling ball with normalMaterial</a></li>
 	<li>[Spin ball](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/Spin%20ball "Spin ball")</li>
 	<li>[Rolling snowball](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/Rolling%20snowball "Rolling snowball")</li>
 </ol>
