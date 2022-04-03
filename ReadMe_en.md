@@ -13,7 +13,7 @@
   > - You can move the snowball with **WASD** keys!
   > - When you move, it seems snowy and windy! Also, moving around, you can make the snowball BIGGER!
   > - If your snowball meets the other one, they become A CUTE~~GENTLE~~ SNOWMAN!
-  > - You wanna take a picture of your snowman? Try controlling the camera angle with sliders!
+  > - Do you want to TAKE A PICTURE OF YOUR SNOWMAN? Try controlling the camera angle with sliders!
   
 ### Now, it's time to play this game!
 # Enjoy!
