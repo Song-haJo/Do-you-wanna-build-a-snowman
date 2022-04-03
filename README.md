@@ -19,7 +19,8 @@ Do you wanna build a snowman?은 D. Shiffman 교수님의 [3차원 지형 코드
 ## 디렉토리
 ### 완성본🎉
 
-### 연습 파일
+<details>
+	<summary>### 연습 파일</summary>
  - [Balls](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/tree/main/Balls "Balls")
 	 1. [example1](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/example1 "example1")
 	 2. [Spin ball](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/Spin%20ball "Spin ball")
@@ -38,7 +39,7 @@ Do you wanna build a snowman?은 D. Shiffman 교수님의 [3차원 지형 코드
 	 5. [background image.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/background%20image.js "background image.js")
 	 6. [make_snowman](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman "make_snowman")
 	 7. [make_snowman_2](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman_2 "make_snowman_2")
-		
+		</details>	
 ## 출처 및 참고 자료
 		- 이미지
 		https://upload2.inven.co.kr/upload/2016/12/22/bbs/i13434774584.gif
