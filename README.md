@@ -3,6 +3,12 @@
   #### 프로젝트명 : Do you wanna build a snowman?<br/>과목명 : 컴퓨터 그래픽스(심재창 교수님)<br/>프로젝트 팀 : 10팀<br/>팀 구성 : [최연우](https://github.com/wafla)(PL), [서정목](https://github.com/SeoJeongmok), [이준성](https://github.com/leejs123), [조송하](https://github.com/Song-haJo), [허영준](https://github.com/telecom9005)<br/>프로젝트 수행 기간 : 2022.03.28~2022.04.03
 ##### Processing / written in p5.js
 
+## 목차
+1. [프로그램 개요](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/README.md#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EA%B0%9C%EC%9A%94)
+2. [디렉토리](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/README.md#%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC)
+3. [소감](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/README.md#%EC%86%8C%EA%B0%90)
+4. [출처 및 참고 자료](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/README.md#%EC%B6%9C%EC%B2%98-%EB%B0%8F-%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C)
+
   ## 프로그램 개요
   ![image align="center"](https://user-images.githubusercontent.com/102511282/161424612-046447d3-5707-4000-bec9-af1a57666166.png)
   
