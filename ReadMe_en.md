@@ -17,7 +17,8 @@
   
 ### Now, it's time to play this game!
 # Enjoy!
-
+<h3 align="center">Thanks to Prof. J. Shim for this opportunity.</h3>
+	<p align="right">Sincerely,<br/>Team 10.</p>
   ## Directory
   ### Final Version🎉&nbsp; &nbsp; &nbsp;  [Code.js](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/Code.js "Code.js")
   ### Parts for Practice
@@ -43,10 +44,6 @@
 	  9. [snowman_deco_1.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_1.js "snowman_deco_1.js")
 	  10. [snowman_deco_2.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_2.js "snowman_deco_2.js")
 	  11. [snowman_deco_3.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snowman_deco_3.js "snowman_deco_3.js")
-
-
-<h3 align="center">Thanks to Prof. J. Shim for this opportunity.</h3>
-	<p align="right">Sincerely,<br/>Team 10.</p>
 
   ## References
   - Image
