@@ -23,23 +23,23 @@
 
   ### 연습 파일
 - [Balls](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/tree/main/Balls "Balls")
-	 1. [Rolling ball with normalMaterial](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/Balls/Rolling%20ball%20with%20normalMaterial "Rolling ball with normalMaterial")
-	 2. [Spin ball](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/Spin%20ball "Spin ball")
-	 3. [Rolling snowball](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/Rolling%20snowball "Rolling snowball")
+	 1. [Rolling ball with normalMaterial.js](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/Balls/Rolling%20ball%20with%20normalMaterial.js "Rolling ball with normalMaterial.js")
+	 2. [Spin ball.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/Spin%20ball.js "Spin ball.js")
+	 3. [Rolling snowball.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Balls/Rolling%20snowball.js "Rolling snowball.js")
 ---
  - [Camera, light & material settings](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/tree/main/Camera%2C%20light%20%26%20material%20settings "Camera, light & material settings")
-	 1. [camera](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Camera%2C%20light%20%26%20material%20settings/camera "camera")
+	 1. [camera.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Camera%2C%20light%20%26%20material%20settings/camera.js "camera.js")
 	 2. [ambientLight.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Camera%2C%20light%20%26%20material%20settings/ambientLight.js "ambientLight.js")
 	 3. [ambientLight & specularMaterial.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Camera%2C%20light%20%26%20material%20settings/ambientLight%20%26%20specularMaterial.js "ambientLight & specularMaterial.js")
 ---	 
  - [Decoration](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/tree/main/Decoration "Decoration")
-	 1. [bigger size & colored ground](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/bigger%20size%20%26%20colored%20ground "bigger size & colored ground")
-	 2. [snow_1](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snow_1 "snow_1")
+	 1. [bigger size & colored ground.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/bigger%20size%20%26%20colored%20ground.js "bigger size & colored ground.js")
+	 2. [snow.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snow.js "snow.js")
 	 3. [deco_object.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/deco_object.js "deco_object.js")
-	 4. [snow+wind](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snow%2Bwind "snow+wind")
+	 4. [snow & wind.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/snow%20%26%20wind.js "snow & wind.js")
 	 5. [background image.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/background%20image.js "background image.js")
-	 6. [make_snowman](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman "make_snowman")
-	 7. [make_snowman_2](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman_2 "make_snowman_2")
+	 6. [make_snowman.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman.js "make_snowman.js")
+	 7. [make_snowman_2.js](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/blob/main/Decoration/make_snowman_2.js "make_snowman_2.js")
 
 ## 소감
 	  
