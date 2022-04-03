@@ -16,9 +16,9 @@
   > - You wanna take a picture of your snowman? Try controlling the camera angle with sliders!
   
 ### Now, it's time to play this game!
-# Enjoy!
-<h3 align="center">Thanks to Prof. J. Shim for this opportunity.</h3>
+# Enjoy!<h3 align="center">Thanks to Prof. J. Shim for this opportunity.</h3>
 	<p align="right">Sincerely,<br/>Team 10.</p>
+
   ## Directory
   ### Final Version🎉&nbsp; &nbsp; &nbsp;  [Code.js](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/Code.js "Code.js")
   ### Parts for Practice
