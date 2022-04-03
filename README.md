@@ -1,8 +1,7 @@
 # Do you wanna build a snowman?
 
   #### 프로젝트명 : Do you wanna build a snowman?<br/>과목명 : 컴퓨터 그래픽스(심재창 교수님)<br/>프로젝트 팀 :
-10팀<br/>팀 구성 :
-[최연우](https://github.com/wafla)(PL), [서정목](https://github.com/SeoJeongmok), [이준성](https://github.com/leejs123), [조송하](https://github.com/Song-haJo), [허영준](https://github.com/telecom9005)<br/>프로젝트 수행 기간 : 2022.03.28~2022.04.03
+10팀<br/>팀 구성 : [최연우](https://github.com/wafla)(PL), [서정목](https://github.com/SeoJeongmok), [이준성](https://github.com/leejs123), [조송하](https://github.com/Song-haJo), [허영준](https://github.com/telecom9005)<br/>프로젝트 수행 기간 : 2022.03.28~2022.04.03
 ##### Processing / written in p5.js
 
   ## 프로그램 개요
