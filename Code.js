@@ -40,7 +40,7 @@ let xz;
 let c, r, g;                  
 let time = 0, timespeed=0.5;
 
-//image
+// image
 let img;
 
 function preload() {
