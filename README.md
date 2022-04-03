@@ -20,7 +20,7 @@
 
   ## 디렉토리
   ### 완성본🎉
-
+### [Code.js](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/Code.js "Code.js")
   ### 연습 파일
 - [Balls](https://github.com/wafla/Terrain-with-Lilght-Camera-Material/tree/main/Balls "Balls")
 	 1. [Rolling ball with normalMaterial.js](https://github.com/wafla/Do-you-wanna-build-a-snowman/blob/main/Balls/Rolling%20ball%20with%20normalMaterial.js "Rolling ball with normalMaterial.js")
